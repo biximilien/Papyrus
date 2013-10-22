@@ -1,0 +1,110 @@
+#VRML V2.0 utf8
+# Auteur: Maxime Gauthier
+
+DEF CAT_STATUE Group {
+  children [
+    DEF CAT_HEAD Transform {
+      translation 0 2 0
+      children [
+        Shape {
+          appearance DEF CAT_APPEARANCE Appearance {
+            material Material {
+              diffuseColor 0.33 0.28 0.33
+            }
+          } # END CAT_APPEARANCE
+
+          geometry Sphere {
+            radius 0.9
+          }
+        },
+
+        DEF HEAD_LEFT_EAR Transform {
+          translation -0.7 0.65 0
+          rotation 0 0 1 0.52
+          children [
+            DEF HEAD_EAR Shape {
+              appearance USE CAT_APPEARANCE
+              geometry Cone {
+                height 1.2
+                bottomRadius 0.3
+              }
+            } # END HEAD_EAR
+          ]
+        }, # END HEAD_LEFT_HEAR
+
+        DEF HEAD_RIGHT_EAR Transform {
+          translation 0.7 0.65 0
+          rotation 0 0 1 -0.52
+          children [
+            USE HEAD_EAR
+          ]
+        }, # END HEAD_RIGHT_EAR
+
+        DEF HEAD_LEFT_EYE Transform {
+          translation -0.35 0.25 0.65
+          children [
+            DEF HEAD_EYE Shape {
+              appearance DEF EYE_APPEARANCE Appearance {
+                material Material {
+                  diffuseColor 0.2 0.2 0.2
+                }
+              }
+
+              geometry Sphere {
+                radius 0.20
+              }
+            } # END HEAD_EYE
+          ]
+        }, # END HEAD_LEFT_EYE
+
+        DEF HEAD_RIGHT_EYE Transform {
+          translation 0.35 0.25 0.65
+          children [
+            USE HEAD_EYE
+          ]
+        }, # END HEAD_RIGHT_EYE
+
+        DEF HEAD_MOUTH Transform {
+          rotation 1 0 0 2.0
+          translation 0 0 0.68
+          children [
+            Shape {
+              appearance USE CAT_APPEARANCE
+              geometry Cylinder {
+                radius 0.3
+                height 0.75
+              }
+            }
+          ]
+        }, # END MOUTH_Transform
+
+        DEF HEAD_JAW Transform {
+          rotation 1 0 0 1.40
+          translation 0 -0.2 0.7
+          children [
+            Shape {
+              appearance USE CAT_APPEARANCE
+              geometry Cylinder {
+                radius 0.3
+                height 0.75
+              }
+            }
+          ]
+        } # END HEAD_JAW
+      ]
+    }, # END CAT_HEAD
+
+    DEF CAT_BODY Transform {
+      translation 0 0.2 0
+      children [
+        Shape {
+          appearance USE CAT_APPEARANCE
+          geometry Cylinder {
+            radius 0.6
+            height 2.75
+          }
+        }
+      ]
+    } # END CAT_BODY
+  ]
+} # END CAT_STATUE
