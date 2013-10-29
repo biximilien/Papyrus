@@ -26,7 +26,7 @@
 		{
 			material Material
 			{
-				diffuseColor 0 .5 0	#Vert feuille
+				diffuseColor .4549 .7098 .3765	#Vert feuille
 				specularColor .2 .5 .2
 			}
 		}

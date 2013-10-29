@@ -1,0 +1,137 @@
+#VRML V2.0 utf8
+
+Group
+{
+	children 
+	[
+		Transform	#Baton
+		{
+			rotation 1 0 0 3.14
+			children Shape
+			{
+				geometry Cone
+				{
+					height 1
+					bottomRadius .05
+				}
+				
+				appearance Appearance
+				{
+					material Material
+					{
+						diffuseColor .251 .125 .043
+					}
+				}
+			}
+		}
+		
+		DEF Boule Transform 	#Feu
+		{
+			translation 0 .5 0
+			children
+			[
+				Shape 	#Boule de feu
+				{
+					geometry Sphere
+					{
+						radius .1	
+					}
+					appearance Appearance
+					{
+						texture ImageTexture
+						{
+							url "skinFeu.jpeg"
+						}
+					}
+				}
+				
+				DEF CouleurLumiere PointLight	#Lumière
+				{
+					color .976 .596 .024
+				}
+				
+				DEF Clock TimeSensor
+				{
+					loop TRUE
+					cycleInterval .5
+				}
+				
+				
+				DEF Orientation OrientationInterpolator
+				{
+					key
+					[
+						0
+						0
+						.2
+						.2
+						.4
+						.4
+						.6
+						.6
+						.8
+						.8
+						1
+						1
+					]
+					
+					keyValue
+					[
+						0 1 0 .57
+						0 1 0 5.14
+						0 1 0 5.14
+						0 1 0 1.71
+						0 1 0 1.71
+						0 1 0 2.856
+						0 1 0 2.856
+						0 1 0 3.43
+						0 1 0 3.43
+						0 1 0 0
+						0 1 0 0
+						0 1 0 .57
+					]
+				}
+				
+				DEF Scale PositionInterpolator
+				{
+					key
+					[
+						0
+						0
+						.2
+						.2
+						.4
+						.4
+						.6
+						.6
+						.8
+						.8
+						1
+						1
+					]
+					
+					keyValue
+					[
+						2 2 2
+						1.4 1.4 1.4
+						1.4 1.4 1.4
+						1.6 1.6 1.6
+						1.6 1.6 1.6
+						1.2 1.2 1.2
+						1.2 1.2 1.2
+						1.8 1.8 1.8
+						1.8 1.8 1.8
+						2 2 2
+					]
+				}
+				
+			]
+		}
+	]
+}
+
+ROUTE Clock.fraction_changed TO Orientation.set_fraction
+ROUTE Orientation.value_changed TO Boule.set_rotation
+
+ROUTE Clock.fraction_changed TO Scale.set_fraction
+ROUTE Scale.value_changed TO Boule.set_scale

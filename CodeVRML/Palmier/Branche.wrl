@@ -4,70 +4,94 @@ Transform
 {
 	children
 	[
-		DEF Chunk4 Group
+		DEF Chunk8 Transform
 		{
+			#scale .75 1 1
 			children
 			[
-				DEF Chunk2 Group
+				DEF Chunk4 Transform
 				{
+					#scale .75 1 1
 					children
 					[
-						DEF Chunk1 Group
+						DEF Chunk2 Transform
 						{
-							children Shape{geometry Sphere{radius 1}}
+							#scale .75 1 1
+							children
+							[
+								DEF Chunk1 Transform
+								{
+									children
+									[
+										Shape
+										{
+											geometry Cylinder
+											{
+												radius .01
+												height 0.25
+											}
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor 0 .5 0	#Vert feuille
+												}
+											}
+										}
+										
+										DEF Feuille Transform
+										{
+											rotation 0 1 0 .3
+											children Transform
+											{
+												rotation 0 0 1 1.57
+												children Inline
+												{
+													url "Feuille.wrl"
+												}
+											}
+										}
+										
+										Transform
+										{
+											rotation 0 0 1 3.14				
+											children USE Feuille
+										}	
+									]
+								}
+								
+								Transform
+								{
+									translation 0 .2375 0
+									scale .9 .9 .9
+									children USE Chunk1
+								}
+							]
 						}
+						
 						Transform
 						{
-							translation 0 1 0 .1
-							scale .9 .9 .9
-							children USE Chunk1
+							translation 0 0.45125 0
+							scale .81 .81 .81
+							children USE Chunk2
 						}
 					]
 				}
+				
+				Transform
+				{
+					translation 0 0.7716375 0
+					scale .6561 .6561 .6561
+					children USE Chunk4
+				}
 			]
 		}
-	
-	
-		# DEF PartieBranche Group
-		# {
-			# children
-			# [
-				# Shape
-				# {
-					# geometry Cylinder
-					# {
-						# radius .01
-						# height 0.25
-					# }
-					# appearance Appearance
-					# {
-						# material Material
-						# {
-							# diffuseColor 0 .5 0	#Vert feuille
-						# }
-					# }
-				# }
-				
-				# DEF Feuille Transform
-				# {
-					# rotation 0 1 0 .5
-					# children Transform
-					# {
-						# rotation 0 0 1 1.57
-						# children Inline
-						# {
-							# url "Feuille.wrl"
-						# }
-					# }
-				# }
-				
-				# Transform
-				# {
-					# rotation 0 0 1 3.14
-					
-					# children USE Feuille
-				# }	
-			# ]
-		# }
+		Transform
+		{
+			translation 0 1.1875501125 0
+			scale .4304 .4304 .4304
+			children USE Chunk8
+		}		
+		
 	]
 }
