@@ -1,7 +1,14 @@
 #VRML V2.0 utf8
 
-Group
+Inline
 {
+	url "Support.wrl"
+}
+
+Transform	#Torche
+{
+	translation 0 0 .2
+	rotation 1 0 0 .4
 	children 
 	[
 		Transform	#Baton
@@ -12,7 +19,7 @@ Group
 				geometry Cone
 				{
 					height 1
-					bottomRadius .05
+					bottomRadius .1
 				}
 				
 				appearance Appearance
@@ -47,7 +54,9 @@ Group
 				
 				DEF CouleurLumiere PointLight	#Lumière
 				{
-					color .976 .596 .024
+					location 0 .5 0
+					color .8 .5 0
+					radius 2
 				}
 				
 				DEF Clock TimeSensor
@@ -128,7 +137,7 @@ Group
 			]
 		}
 	]
-}
+} #/Torche
 
 ROUTE Clock.fraction_changed TO Orientation.set_fraction
 ROUTE Orientation.value_changed TO Boule.set_rotation

@@ -1,0 +1,45 @@
+#VRML V2.0 utf8
+
+#Porche d'entrée de la pyramide
+
+Shape #Porche
+{
+	appearance Appearance
+	{
+		material Material
+		{
+			diffuseColor .3 .4 .16
+		}
+	}
+	geometry Extrusion
+	{
+		crossSection	#Triangle pour le toit
+		[
+			-1 0
+			-1 2
+			-1.5 2
+			0 3.75
+			1.5 2
+			1 2
+			1 0
+			.5 0
+			.5 1.5
+			-.5 1.5
+			-.5 0
+			-1 0
+			.5 0
+		]
+		
+		spine
+		[
+			0 0 0
+			0 0 -6
+		]
+		
+		solid FALSE
+		beginCap TRUE
+		endCap TRUE
+	}
+} #/Porche
+
+

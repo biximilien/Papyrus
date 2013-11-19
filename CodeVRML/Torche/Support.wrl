@@ -1,0 +1,58 @@
+#VRML V2.0 utf8
+
+Shape #Plaque de bois
+{
+	geometry Box
+	{
+		size .4 1 .02
+	}
+	
+	appearance Appearance
+	{
+		material Material
+		{
+			diffuseColor .2 .2 .4
+			transparency .2
+		}
+	}
+}
+
+Transform #Tige de bronze
+{
+	translation 0 .1 0
+	scale .5 .5 .75
+	children Shape
+	{
+		appearance Appearance
+		{
+			material Material
+			{
+				diffuseColor .2 .2 .4
+				transparency .2
+			}
+		}
+		geometry Extrusion
+		{
+			crossSection	#Triangle pour le toit
+			[
+				-.07 0
+				0 .1
+				.07 0
+				-.07 0
+			]
+			
+			spine
+			[
+				-.3 0 0
+				-.1 0 .45
+				.1 0 .45
+				.3 0 0
+			]
+			#orientation 0 0 1 .5
+			
+			beginCap TRUE
+			endCap TRUE
+		}
+	} 
+} #/Tige de bronze
+

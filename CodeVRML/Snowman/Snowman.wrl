@@ -1,0 +1,243 @@
+#VRML V2.0 utf8
+
+Transform	#Bonhomme de neige
+{
+	scale 0.5 0.5 0.5
+	children
+	[
+		Transform	#Tete
+		{
+			translation 0 6.5 0
+
+			children
+			[
+				Transform	#Chapeau
+				{
+					translation 0, 1, 0
+
+					children
+					[
+						Transform	#Top chapeau
+						{
+							translation 0, 1, 0
+
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor 0,0,0				#Couleur Noire
+											emissiveColor .05, .05, .05		#Reflet Gris
+										}
+
+									}
+									geometry Cylinder
+									{
+										radius .9
+										height 1.5
+									}#/Top chapeau
+								}
+							]
+						}
+
+						Shape	#Bas chapeau
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 0,0,0				#Couleur Noire
+									emissiveColor .05, .05, .05		#Reflet Gris
+								}
+
+							}
+							geometry Cylinder
+							{
+								radius 1.1
+								height .5
+							}#/Bas chapeau
+						}
+
+					]
+				}#/Chapeau
+
+
+				Shape	#Boule de tête
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor 1,1,1	#Couleur neige
+							emissiveColor 0,0,1		#Reflet bleu
+						}
+
+					}
+					geometry Sphere
+					{
+						radius 1
+					}
+				}#/Boule de tête
+
+				Transform	#Nez
+				{
+					translation 1 0 0
+					rotation 0 0 1 -1.5
+
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor .75 .5 0
+									emissiveColor .1 .1 .1
+								}
+
+							}
+							geometry Cone
+							{
+								height 1
+								bottomRadius .25
+							}
+						}
+					]
+
+				}#/Nez
+
+				Transform #Yeux
+				{
+					translation .75, .25, 0
+
+					children
+					[
+						Transform #Oeil droit
+						{
+							translation 0, 0, .5
+
+							children
+							[
+								DEF CreepyEye Billboard	 #CreepyEye
+								{
+									axisOfRotation 0,0,0	#Regarde vers l'usager
+
+									children
+									[
+										Shape	#Boule de l'oeil
+										{
+											geometry Sphere
+											{
+												radius .25
+											}
+											appearance Appearance
+											{
+												material Material
+												{
+													diffuseColor 1 1 1
+													emissiveColor .8 .1 .1
+													specularColor 0 1 0
+												}
+											}
+										}#/Boule de l'oeil
+
+										Transform 	#Iris de l'oeil
+										{
+											translation 0 0 .175
+											children
+											[
+												Shape
+												{
+													geometry Sphere
+													{
+														radius .1
+													}
+													appearance Appearance
+													{
+														material Material
+														{
+															diffuseColor 0,0,0
+															emissiveColor .05 .05 .05
+														}
+													}
+												}
+											]
+										}#/Iris de l'oeil
+									]
+								}#/CreepyEye
+							]
+						}#/Oeil droit
+
+						Transform	#Oeil gauche
+						{
+							translation 0, 0, -.5
+							children
+							[
+								USE CreepyEye
+							]
+
+						}#/Oeil gauche
+					]
+				}#/Yeux
+			]
+		}	#/Tete
+
+
+		Transform
+		{
+			children
+			[
+				Shape	#Corps
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor 1,1,1
+							emissiveColor 0,0,1
+						}
+
+					}
+					geometry Sphere
+					{
+						radius 2
+					}
+				}
+			]
+
+			translation 0, 4 ,0
+		}
+
+		Transform
+		{
+			children
+			[
+				Shape	#Pieds
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor 1,1,1
+							emissiveColor 0,0,1
+						}
+
+					}
+					geometry Sphere
+					{
+						radius 3
+					}
+				}
+			]
+
+		}
+
+
+	]
+
+}	#/Bonhomme de neige
+

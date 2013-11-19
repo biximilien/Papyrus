@@ -1,0 +1,71 @@
+#VRML V2.0 utf8
+
+NavigationInfo
+{
+	headlight FALSE
+	avatarSize [.25 .9 .75]
+}
+
+Inline
+{
+	url "../PieceEntree/PieceEntree.wrl"
+}
+
+Transform
+{
+	translation 0 0 6
+	children Inline
+	{
+		url "../Porche/Porche.wrl"
+	}
+}
+Transform
+{
+	translation 0 0 -6
+	scale 2 2 1
+	children Inline
+	{
+		url "../CouloirSecret/CouloirSecret.wrl"
+	}
+}
+
+Transform
+{
+	translation 0 0 -12
+	children Inline
+	{
+		url "../PieceSecrete/PieceSecrete.wrl"
+	}
+}
+
+Viewpoint 
+{ 
+	position 0 1 9
+	description "Porche"
+	jump FALSE
+}
+
+Viewpoint 
+{ 
+	position 10 10 10
+	orientation -1 2 0 .7
+	description "Vue globale"
+	jump FALSE
+}
+
+Viewpoint 
+{ 
+	position 0 1 0
+	description "Piece Principale"
+	jump FALSE
+}
+
+Viewpoint 
+{ 
+	position 0 1 -12
+	description "Piece Secrete"
+	jump FALSE
+}
+
+
+
