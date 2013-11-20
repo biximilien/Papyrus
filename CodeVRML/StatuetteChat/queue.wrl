@@ -1,0 +1,55 @@
+#VRML V2.0 utf8
+# Auteur: Maxime Gauthier
+
+DEF CAT_TAIL Transform {
+  translation -0.3 0.15 -0.2
+  rotation 0.0 1.0 0.0 3.14
+  scale 0.2 0.2 0.2
+  children
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.2 0.3 0.2
+        }
+      }
+      geometry Extrusion {
+        creaseAngle 1.57
+        beginCap TRUE
+        endCap   TRUE
+        scale [
+          0.5 0.5,
+          1 1,
+          1 1,
+          1 1,
+          1 1,
+          1 1,
+          1 1,
+          1 1,
+          1 1,
+          1 1,
+          1 1
+        ]
+        crossSection [
+           0 -1,
+          -1 -0,
+          -1  1,
+           1  1,
+           1  0,
+           0 -1,
+        ]
+        spine [
+           1.00 0.0 -5.00,
+           2.00 0.0 -4.50,
+           2.00 0.0  0.00,   
+           1.85 0.0  0.77,
+           1.41 0.0  1.41,   
+           0.77 0.0  1.85,
+           0.00 0.0  2.00,  
+          -0.77 0.0  1.85,
+          -1.41 0.0  1.41,  
+          -1.85 0.0  0.77,
+          -2.00 0.0  0.00
+        ]
+      }
+    }
+}
