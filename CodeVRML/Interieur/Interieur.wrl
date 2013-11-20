@@ -11,6 +11,27 @@ Inline
 	url "../PieceEntree/PieceEntree.wrl"
 }
 
+
+Shape
+{
+	geometry Box
+	{
+		size 25 .0001 50
+	}
+	appearance Appearance
+	{
+		texture ImageTexture
+		{
+			url "../Images/Plancher.jpg"
+		}
+		
+		textureTransform TextureTransform
+		{
+			scale 7 7
+		}
+	}
+}
+
 Transform
 {
 	translation 0 0 6
@@ -40,6 +61,13 @@ Transform
 
 Viewpoint 
 { 
+	position 0 1 0
+	description "Piece Principale"
+	jump FALSE
+}
+
+Viewpoint 
+{ 
 	position 0 1 9
 	description "Porche"
 	jump FALSE
@@ -53,12 +81,7 @@ Viewpoint
 	jump FALSE
 }
 
-Viewpoint 
-{ 
-	position 0 1 0
-	description "Piece Principale"
-	jump FALSE
-}
+
 
 Viewpoint 
 { 

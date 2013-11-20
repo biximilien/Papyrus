@@ -14,6 +14,15 @@ Shape #Plaque de bois
 			diffuseColor .2 .2 .4
 			transparency .2
 		}
+		texture ImageTexture
+		{
+			url "../Images/Wood.jpg"
+		}
+		textureTransform TextureTransform
+		{
+			scale 1 1
+			rotation 1.57
+		}
 	}
 }
 

@@ -28,41 +28,59 @@ Transform	#Torche
 					{
 						diffuseColor .251 .125 .043
 					}
+					texture ImageTexture
+					{
+						url "../Images/Wood.jpg"
+					}
+					textureTransform TextureTransform
+					{
+						scale 1 1
+						rotation 1.57
+					}
+					
 				}
 			}
 		}
 		
-		DEF Boule Transform 	#Feu
+		
+		DEF BouleScale Transform 	#Feu
 		{
 			translation 0 .5 0
 			children
 			[
-				Shape 	#Boule de feu
+				DEF CouleurLumiere PointLight	#Lumière
 				{
-					geometry Sphere
+					intensity 1
+					location 0 .5 0
+					#color .8 .5 0
+					color 1 .2 0
+					radius 4
+					attenuation .2 .2 .2
+				}
+				
+				DEF BouleRotation Transform
+				{
+					children Shape 	#Boule de feu
 					{
-						radius .1	
-					}
-					appearance Appearance
-					{
-						texture ImageTexture
+						geometry Sphere
 						{
-							url "skinFeu.jpeg"
+							radius .1	
+						}
+						appearance Appearance
+						{
+							texture ImageTexture
+							{
+								url "skinFeu.jpeg"
+							}
 						}
 					}
 				}
 				
-				DEF CouleurLumiere PointLight	#Lumière
-				{
-					location 0 .5 0
-					color .8 .5 0
-					radius 2
-				}
 				
 				DEF Clock TimeSensor
 				{
 					loop TRUE
-					cycleInterval .5
+					cycleInterval .7
 				}
 				
 				
@@ -140,7 +158,7 @@ Transform	#Torche
 } #/Torche
 
 ROUTE Clock.fraction_changed TO Orientation.set_fraction
-ROUTE Orientation.value_changed TO Boule.set_rotation
+ROUTE Orientation.value_changed TO BouleRotation.set_rotation
 
 ROUTE Clock.fraction_changed TO Scale.set_fraction
-ROUTE Scale.value_changed TO Boule.set_scale
+ROUTE Scale.value_changed TO BouleScale.set_scale

@@ -12,6 +12,15 @@ Shape #Murs de la pièce
 		{
 			diffuseColor .3 .4 .16
 		}
+		# texture ImageTexture
+		# {
+			# url "../Images/Tapisserie1.jpg"
+		# }
+		# textureTransform TextureTransform
+		# {
+			# scale 3 4
+			# rotation 1.57
+		# }
 	}
 	geometry Extrusion
 	{
@@ -34,7 +43,7 @@ Shape #Murs de la pièce
 		
 		scale
 		[
-			.5 2
+			.5 1.5
 			3 3
 			3 3
 			1 2
