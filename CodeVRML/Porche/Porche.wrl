@@ -10,6 +10,15 @@ Shape #Porche
 		{
 			diffuseColor .3 .4 .16
 		}
+		texture ImageTexture
+		{
+			url "../Images/Tapisserie2.jpg"
+		}
+		textureTransform TextureTransform
+		{
+			scale 1 10
+			rotation 1.57
+		}
 	}
 	geometry Extrusion
 	{
@@ -38,7 +47,7 @@ Shape #Porche
 		
 		solid FALSE
 		beginCap TRUE
-		endCap TRUE
+		endCap FALSE
 	}
 } #/Porche
 
