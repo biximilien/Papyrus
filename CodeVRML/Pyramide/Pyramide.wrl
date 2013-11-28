@@ -2,7 +2,7 @@
 # Auteur: Maxime Gauthier
 
 DEF PYRAMID_INTERIOR Transform {
-  translation -10 0 0
+  translation 0 0 11
   children [
     Inline {
       url "../Interieur/Interieur.wrl"
