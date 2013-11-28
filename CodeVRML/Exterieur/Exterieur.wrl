@@ -43,3 +43,23 @@ DEF FLOOR Shape {
     coordIndex [ 0 3 2 1 ]
   }
 }
+
+DEF PALM_1 Transform {
+  children [
+    DEF PALM Transform {
+      scale 1.5 1.5 1.5
+      translation 0 1.2 0
+      children [
+        Inline {
+          url "../Palmier/Palmier.wrl"
+        }
+      ]
+    }
+  ]
+}
+
+DEF PALM_2 Transform {
+  children [
+    USE PALM
+  ]
+}
