@@ -1,11 +1,9 @@
 #VRML V2.0 utf8
 # Auteur: Maxime Dupuis
 
-Inline
-{
+Inline {
 	url "../PieceEntree/PieceEntree.wrl"
 }
-
 
 DEF INTERIOR_FLOOR Transform {
 	translation 0 0 -7.5
@@ -58,37 +56,3 @@ Transform
 		url "../PieceSecrete/PieceSecrete.wrl"
 	}
 }
-
-Viewpoint 
-{ 
-	position 0 1 0
-	description "Piece Principale"
-	jump FALSE
-}
-
-Viewpoint 
-{ 
-	position 0 1 9
-	description "Porche"
-	jump FALSE
-}
-
-Viewpoint 
-{ 
-	position 10 10 10
-	orientation -1 2 0 .7
-	description "Vue globale"
-	jump FALSE
-}
-
-
-
-Viewpoint 
-{ 
-	position 0 1 -12
-	description "Piece Secrete"
-	jump FALSE
-}
-
-
-

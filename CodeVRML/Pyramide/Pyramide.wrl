@@ -9,6 +9,7 @@ DEF NAVIGATION_INFO NavigationInfo {
 }
 
 DEF PYRAMID_INTERIOR Transform {
+  # Intercaller l'interieur avec la pyramide
   translation 0 0 11
   children [
     Inline {
