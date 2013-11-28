@@ -1,10 +1,5 @@
 #VRML V2.0 utf8
-
-NavigationInfo
-{
-	headlight FALSE
-	avatarSize [.25 .9 .75]
-}
+# Auteur: Maxime Dupuis
 
 Inline
 {
@@ -12,24 +7,29 @@ Inline
 }
 
 
-Shape
-{
-	geometry Box
-	{
-		size 25 .0001 50
-	}
-	appearance Appearance
-	{
-		texture ImageTexture
+DEF INTERIOR_FLOOR Transform {
+	translation 0 0 -7.5
+	children [
+		Shape
 		{
-			url "../Images/Plancher.jpg"
+			geometry Box
+			{
+				size 20 .0001 25
+			}
+			appearance Appearance
+			{
+				texture ImageTexture
+				{
+					url "../Images/Plancher.jpg"
+				}
+				
+				textureTransform TextureTransform
+				{
+					scale 7 7
+				}
+			}
 		}
-		
-		textureTransform TextureTransform
-		{
-			scale 7 7
-		}
-	}
+	]
 }
 
 Transform

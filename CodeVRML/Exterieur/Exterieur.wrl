@@ -45,13 +45,16 @@ DEF SUN DirectionalLight {
   direction 0 -1 0
 }
 
-DEF FLOOR Transform {
-  translation 0 -0.01 0 
+DEF EXTERIOR_FLOOR Transform {
+  translation 0 -0.05 0 
   children [
     Shape {
       appearance Appearance {
-        material Material {
-          diffuseColor 0.8 0.8 0
+        texture ImageTexture {
+          url "../Images/Sable.jpg"
+        }
+        textureTransform TextureTransform {
+          scale 7 7
         }
       }
       geometry IndexedFaceSet {
@@ -66,6 +69,8 @@ DEF FLOOR Transform {
 }
 
 DEF PALM_1 Transform {
+  translation -17.3 0 17.2
+  rotation 0 1 0 0.7
   children [
     DEF PALM Transform {
       scale 1.5 1.5 1.5
@@ -80,6 +85,8 @@ DEF PALM_1 Transform {
 }
 
 DEF PALM_2 Transform {
+  translation 21.9 0.5 19.2
+  rotation 0 1 0 1.2
   children [
     USE PALM
   ]
