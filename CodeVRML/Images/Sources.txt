@@ -15,3 +15,6 @@ Plancher:
 
 Bois:
 	http://www.wildtextures.com/wp-content/uploads/2011/10/wildtextures-old-wood-original-file.jpg
+
+Bouton:
+	http://www.godlikeproductions.com/sm/custom/h/q/fbec1888a5.jpg
