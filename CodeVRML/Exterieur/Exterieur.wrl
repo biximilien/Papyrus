@@ -32,7 +32,7 @@ DEF PYRAMID Shape {
 
       7 6 5 4 3 2 8 -1
 
-      0 7 2  1
+      # 0 7 2  1 #J'ai enlevé la base pour éviter qu'elle bug avec le plancher de l'intérieur
     ]
   }
 }
