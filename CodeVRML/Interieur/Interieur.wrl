@@ -31,3 +31,20 @@ Transform
 		url "../PieceSecrete/PieceSecrete.wrl"
 	}
 }
+
+DEF INSIDE_PRIMARY_ROOM Viewpoint { 
+  position 0 1 0
+  description "Piece Principale"
+  jump FALSE
+}
+
+DEF OUTSIDE_FRONT Viewpoint { 
+  position 0 1 15
+  description "Porche"
+  jump FALSE
+}
+DEF INSIDE_SECRET_ROOM Viewpoint { 
+  position 0 1 -12
+  description "Piece Secrete"
+  jump FALSE
+}

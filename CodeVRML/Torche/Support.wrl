@@ -9,18 +9,13 @@ Shape #Plaque de bois
 	
 	appearance Appearance
 	{
-		material Material
-		{
-			diffuseColor .2 .2 .4
-			transparency .2
-		}
 		texture ImageTexture
 		{
 			url "../Images/Wood.jpg"
 		}
 		textureTransform TextureTransform
 		{
-			scale 1 1
+			scale 1 .7
 			rotation 1.57
 		}
 	}
@@ -34,12 +29,17 @@ Transform #Tige de bronze
 	{
 		appearance Appearance
 		{
-			material Material
+			texture ImageTexture
 			{
-				diffuseColor .2 .2 .4
-				transparency .2
+				url "../Images/Rouille.jpg"
+			}
+			
+			textureTransform TextureTransform
+			{
+				scale 1 10
 			}
 		}
+		
 		geometry Extrusion
 		{
 			crossSection	#Triangle pour le toit

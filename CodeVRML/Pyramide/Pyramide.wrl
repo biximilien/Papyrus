@@ -26,27 +26,10 @@ DEF PYRAMID_EXTERIOR Transform {
   ]
 }
 
-DEF INSIDE_PRIMARY_ROOM Viewpoint { 
-  position 0 1 0
-  description "Piece Principale"
-  jump FALSE
-}
-
-DEF OUTSIDE_FRONT Viewpoint { 
-  position 0 1 9
-  description "Porche"
-  jump FALSE
-}
-
 DEF OUTSIDE_TOP_LEVEL Viewpoint { 
-  position 10 10 10
-  orientation -1 2 0 .7
+  position 0 40 60
+  orientation -1 0 0 .5
   description "Vue globale"
   jump FALSE
 }
 
-DEF INSIDE_SECRET_ROOM Viewpoint { 
-  position 0 1 -12
-  description "Piece Secrete"
-  jump FALSE
-}

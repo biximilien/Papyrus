@@ -6,17 +6,13 @@ Shape #Porche
 {
 	appearance Appearance
 	{
-		material Material
-		{
-			diffuseColor .3 .4 .16
-		}
 		texture ImageTexture
 		{
-			url "../Images/Tapisserie2.jpg"
+			url "../Images/CrackedMud.jpg"
 		}
 		textureTransform TextureTransform
 		{
-			scale 1 10
+			scale 1 8
 			rotation 1.57
 		}
 	}
