@@ -46,7 +46,7 @@ DEF SUN DirectionalLight {
 }
 
 DEF EXTERIOR_FLOOR Transform {
-  translation 0 -0.05 0 
+  translation -50 -0.05 -50 
   children [
     Shape {
       appearance Appearance {
@@ -57,12 +57,25 @@ DEF EXTERIOR_FLOOR Transform {
           scale 7 7
         }
       }
-      geometry IndexedFaceSet {
-        solid FALSE
-        coord Coordinate {
-          point [ 32 0 -32, -32 0 -32, -32 0 32, 32 0 32 ]
-        }
-        coordIndex [ 0 3 2 1 ]
+      geometry ElevationGrid {
+        xDimension  10
+        zDimension  10
+        xSpacing    10.0
+        zSpacing    10.0
+        solid       FALSE
+        creaseAngle 0.785
+        height [
+            10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0,
+            10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0,
+            10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0,
+            10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0,
+            10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0,
+            10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0,
+            10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0,
+            10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0,
+            10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 10.0,
+            10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0,
+        ]
       }
     }
   ]
