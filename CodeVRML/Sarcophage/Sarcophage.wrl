@@ -10,7 +10,7 @@ Transform
 		{
 			texture ImageTexture
 			{
-				url "texture-cube.jpg"
+				url "texture-sarcophage.jpg"
 			}
 		}
 		
