@@ -81,61 +81,6 @@ DEF EXTERIOR_FLOOR Transform {
   ]
 }
 
-DEF PALM_1 Transform {
-  translation -17.3 0 17.2
-  rotation 0 1 0 0.7
-  children [
-    DEF PALM Transform {
-      scale 1.5 1.5 1.5
-      translation 0 1.2 0
-      children [
-        Inline {
-          url "../Palmier/Palmier.wrl"
-        }
-      ]
-    }
-  ]
-}
-
-
-DEF PALM_GROUP_1 Group {
-  children [
-    DEF PALM_2 Transform {
-      translation 21.9 0.5 19.2
-      rotation 0 1 0 1.2
-      children [
-        USE PALM
-      ]
-    },
-
-    DEF PALM_3 Transform {
-      translation 23.9 0.7 18.7
-      rotation 0 1 0 1.8
-      children [
-        USE PALM
-      ]
-    },
-
-    DEF PALM_4 Transform {
-      translation 25.9 0.6 16.7
-      rotation 0 1 0 2.7
-      children [
-        USE PALM
-      ]
-    }
-  ]
-}
-
-DEF PALM_GROUP_2 Transform {
-  translation -25 0 10
-  children [
-    USE PALM_GROUP_1
-  ]
-}
-
-DEF PALM_GROUP_3 Transform {
-  translation -50 0 -15
-  children [
-    USE PALM_GROUP_1
-  ] 
+Inline {
+  url "Palms.wrl"
 }
