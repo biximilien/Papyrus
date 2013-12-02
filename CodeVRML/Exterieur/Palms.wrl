@@ -77,3 +77,10 @@ DEF PALM_GROUP_4 Group {
     },
   ]  
 }
+
+DEF PALM_GROUP_5 Transform {
+  translation -15 5 -15
+  children [
+    USE PALM_GROUP_4
+  ]
+}
