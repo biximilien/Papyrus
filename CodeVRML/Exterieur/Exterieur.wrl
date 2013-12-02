@@ -97,10 +97,45 @@ DEF PALM_1 Transform {
   ]
 }
 
-DEF PALM_2 Transform {
-  translation 21.9 0.5 19.2
-  rotation 0 1 0 1.2
+
+DEF PALM_GROUP_1 Group {
   children [
-    USE PALM
+    DEF PALM_2 Transform {
+      translation 21.9 0.5 19.2
+      rotation 0 1 0 1.2
+      children [
+        USE PALM
+      ]
+    },
+
+    DEF PALM_3 Transform {
+      translation 23.9 0.7 18.7
+      rotation 0 1 0 1.8
+      children [
+        USE PALM
+      ]
+    },
+
+    DEF PALM_4 Transform {
+      translation 25.9 0.6 16.7
+      rotation 0 1 0 2.7
+      children [
+        USE PALM
+      ]
+    }
   ]
+}
+
+DEF PALM_GROUP_2 Transform {
+  translation -25 0 10
+  children [
+    USE PALM_GROUP_1
+  ]
+}
+
+DEF PALM_GROUP_3 Transform {
+  translation -50 0 -15
+  children [
+    USE PALM_GROUP_1
+  ] 
 }
