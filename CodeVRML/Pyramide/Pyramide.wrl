@@ -35,9 +35,8 @@ DEF PYRAMID_EXTERIOR Transform {
 }
 
 DEF OUTSIDE_TOP_LEVEL Viewpoint { 
-  position 0 40 60
-  orientation -1 0 0 .5
-  description "Vue globale"
+  position 0 25 75
+  orientation -1 0 0 0.25
+  description "Vue d'ensemble"
   jump FALSE
 }
-
