@@ -25,7 +25,7 @@ Transform
 
 Transform
 {
-	translation 0 0 -12
+	translation 0 4 -12
 	children Inline
 	{
 		url "../PieceSecrete/PieceSecrete.wrl"
