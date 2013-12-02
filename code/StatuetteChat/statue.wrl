@@ -4,6 +4,15 @@
 DEF CAT_STATUE Transform {
   scale 0.5 0.5 0.5
   children [
+    DEF CAT_HEAD Transform {
+      translation 0 2.2 0.8
+      children [
+        Inline {
+          url "tete.wrl"
+        }
+      ]
+    },
+
     DEF CAT_BODY Inline {
       url "corp.wrl"
     },

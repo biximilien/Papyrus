@@ -1,9 +1,9 @@
 #VRML V2.0 utf8
 # Auteur: Maxime Gauthier
 
-DEF CAT_STATUE Group {
+DEF CAT_HEAD Group {
   children [
-    DEF CAT_HEAD Transform {
+    DEF CAT_SKULL Transform {
       translation 0 2 0
       children [
         Shape {
@@ -93,18 +93,5 @@ DEF CAT_STATUE Group {
         } # END HEAD_JAW
       ]
     }, # END CAT_HEAD
-
-    DEF CAT_BODY Transform {
-      translation 0 0.2 0
-      children [
-        Shape {
-          appearance USE CAT_APPEARANCE
-          geometry Cylinder {
-            radius 0.6
-            height 2.75
-          }
-        }
-      ]
-    } # END CAT_BODY
   ]
 } # END CAT_STATUE
