@@ -1,4 +1,5 @@
-papyrus
+Papyrus
 =======
 
-A project to model the Great Pyramid of Giza for an introduction course to virtual reality.
+A project to model a pyramid for an introduction course to virtual reality.
+

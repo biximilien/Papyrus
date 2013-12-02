@@ -64,7 +64,7 @@ Transform
 			translation 0 0 -3
 			children Inline
 			{
-				url "../StatuetteChat/StatuetteChat.wrl"
+				url "../StatuetteChat/statue.wrl"
 			}
 		}
 
