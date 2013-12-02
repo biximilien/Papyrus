@@ -44,7 +44,7 @@ DEF OUTSIDE_FRONT Viewpoint {
   jump FALSE
 }
 DEF INSIDE_SECRET_ROOM Viewpoint { 
-  position 0 1 -12
+  position 0 5 -12
   description "Piece Secrete"
   jump FALSE
 }
