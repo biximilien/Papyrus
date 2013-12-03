@@ -6,6 +6,9 @@ DEF PYRAMID Shape {
     texture ImageTexture {
       url "pyramide.jpg"
     }
+    textureTransform TextureTransform {
+      scale 6 6
+    }
   }
   geometry IndexedFaceSet {
     solid FALSE
