@@ -1,0 +1,72 @@
+#VRML V2.0 utf8
+
+Shape 
+{
+	appearance Appearance 
+	{
+		texture ImageTexture 
+		{
+		url "pyramide.jpg"
+		}
+		
+		textureTransform TextureTransform
+		{
+			scale 3 3
+		}
+	}
+  
+	geometry IndexedFaceSet 
+	{
+		coord Coordinate 
+		{
+			point 
+			[
+				 16   0 -16 #0
+				-16   0 -16 #1
+				-16   0  16 #2
+
+				# Trou pour porte
+				-.6   0  16 #3
+				-.6   2.1  16 #4
+				 .6   2.1  16 #5
+				 .6   0  16 #6
+
+				 16   0  16 #7
+				 0  32   0  #8
+			]
+		}
+		coordIndex 
+		[
+			7 0 8 7 -1
+			0 1 8 0 -1
+			1 2 8 1 -1
+
+			2 3 4 5 6 7 8 2 -1
+		]
+	
+		texCoord TextureCoordinate
+		{
+			point
+			[
+				0 0 #COIN GAUCHE
+				1 0	#COIN DROITE
+				.5 1 #COIN TOP
+				
+				#PTS PORTE
+				.48125 0 #3
+				.48125 .065625#4
+				.51875 .065625#5
+				.51875 0 #6
+			]
+		}
+		
+		texCoordIndex
+		[
+			0 1 2 0 -1 
+			0 1 2 0 -1
+			0 1 2 0 -1
+			0 3 4 5 6 1 2 0 -1 
+		]
+	}
+}
+

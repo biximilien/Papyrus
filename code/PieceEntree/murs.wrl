@@ -11,9 +11,7 @@ Shape
 	}
 	
 	geometry IndexedFaceSet
-	{
-		solid TRUE
-	
+	{	
 		coord Coordinate
 		{
 			point

@@ -1,43 +1,9 @@
 #VRML V2.0 utf8
 # Auteur: Maxime Gauthier
 
-DEF PYRAMID Shape {
-  appearance Appearance {
-    texture ImageTexture {
-      url "pyramide.jpg"
-    }
-    textureTransform TextureTransform {
-      scale 6 6
-    }
-  }
-  geometry IndexedFaceSet {
-    solid FALSE
-    coord Coordinate {
-      point [
-         16   0 -16, #0
-        -16   0 -16, #1
-        -16   0  16, #2
-
-        # Trou pour porte
-        -0.6   0  16, #3
-        -0.6   2.1  16, #4
-         0.6   2.1  16, #5
-         0.6   0  16, #6
-
-         16   0  16, #7
-          0  32   0  #8
-      ]
-    }
-    coordIndex [
-      0 8 7 -1
-      1 8 0 -1
-      2 8 1 -1
-
-      7 6 5 4 3 2 8 -1
-
-      # 0 7 2  1 #J'ai enlevé la base pour éviter qu'elle bug avec le plancher de l'intérieur
-    ]
-  }
+Inline 
+{
+	url "Pyramide.wrl"
 }
 
 DEF SUN DirectionalLight {
@@ -65,7 +31,7 @@ DEF EXTERIOR_FLOOR Transform {
         zDimension  10
         xSpacing    20.0
         zSpacing    20.0
-        solid       FALSE
+        solid       TRUE
         creaseAngle 0.785
         height [
             10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0,
