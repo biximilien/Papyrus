@@ -84,3 +84,10 @@ DEF PALM_GROUP_5 Transform {
     USE PALM_GROUP_4
   ]
 }
+
+DEF PALM_GROUP_6 Transform {
+  translation 5 0 5
+  children [
+    USE PALM_GROUP_1
+  ]
+}

@@ -9,6 +9,12 @@ DEF SKYBOX Background {
   topUrl "skybox-top.png"
 }
 
+Fog { 
+  color 0.6 0.8 0.7   
+  fogType "EXPONENTIAL"   
+  visibilityRange 100
+} 
+
 DEF NAVIGATION_INFO NavigationInfo {
   # Eteindre lumiere
   headlight FALSE 
