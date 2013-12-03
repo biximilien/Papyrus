@@ -1,161 +1,181 @@
 #VRML V2.0 utf8
 
-Inline
+LOD
 {
-	url "Support.wrl"
-}
-
-Transform	#Torche
-{
-	translation 0 0 .2
-	rotation 1 0 0 .4
-	children 
+	range [10]
+	level
 	[
-		Transform	#Baton
+		Group
 		{
-			rotation 1 0 0 3.14
-			children Shape
-			{
-				geometry Cone
-				{
-					height 1
-					bottomRadius .1
-				}
-				
-				appearance Appearance
-				{
-					material Material
-					{
-						diffuseColor .251 .125 .043
-					}
-					texture ImageTexture
-					{
-						url "../Images/Wood.jpg"
-					}
-					textureTransform TextureTransform
-					{
-						scale 1 1
-						rotation 1.57
-					}
-					
-				}
-			}
-		}
-		
-		
-		DEF BouleScale Transform 	#Feu
-		{
-			translation 0 .5 0
 			children
 			[
-				DEF CouleurLumiere PointLight	#Lumière
+				Inline
 				{
-					intensity 1
-					location 0 .5 0
-					#color .8 .5 0
-					color 1 .2 0
-					radius 4
-					attenuation .2 .2 .2
+					url "Support.wrl"
 				}
-				
-				DEF BouleRotation Transform
+
+				Transform	#Torche
 				{
-					children Shape 	#Boule de feu
-					{
-						geometry Sphere
+					translation 0 0 .2
+					rotation 1 0 0 .4
+					children 
+					[
+						Transform	#Baton
 						{
-							radius .1	
-						}
-						appearance Appearance
-						{
-							texture ImageTexture
+							rotation 1 0 0 3.14
+							children Shape
 							{
-								url "skinFeu.jpeg"
+								geometry Cone
+								{
+									height 1
+									bottomRadius .1
+								}
+								
+								appearance Appearance
+								{
+									material Material
+									{
+										diffuseColor .251 .125 .043
+									}
+									texture ImageTexture
+									{
+										url "../Images/Wood.jpg"
+									}
+									textureTransform TextureTransform
+									{
+										scale 1 1
+										rotation 1.57
+									}
+									
+								}
 							}
 						}
-					}
-				}
-				
-				
-				DEF Clock TimeSensor
-				{
-					loop TRUE
-					cycleInterval .7
-				}
-				
-				
-				DEF Orientation OrientationInterpolator
-				{
-					key
-					[
-						0
-						0
-						.2
-						.2
-						.4
-						.4
-						.6
-						.6
-						.8
-						.8
-						1
-						1
+						
+						
+						DEF BouleScale Transform 	#Feu
+						{
+							translation 0 .5 0
+							children
+							[
+								DEF CouleurLumiere PointLight	#Lumière
+								{
+									intensity 1
+									location 0 .5 0
+									#color .8 .5 0
+									color 1 .2 0
+									radius 4
+									attenuation .2 .2 .2
+								}
+								
+								DEF BouleRotation Transform
+								{
+									children Shape 	#Boule de feu
+									{
+										geometry Sphere
+										{
+											radius .1	
+										}
+										appearance Appearance
+										{
+											texture ImageTexture
+											{
+												url "skinFeu.jpeg"
+											}
+										}
+									}
+								}
+								
+								
+								DEF Clock TimeSensor
+								{
+									loop TRUE
+									cycleInterval .7
+								}
+								
+								
+								DEF Orientation OrientationInterpolator
+								{
+									key
+									[
+										0
+										0
+										.2
+										.2
+										.4
+										.4
+										.6
+										.6
+										.8
+										.8
+										1
+										1
+									]
+									
+									keyValue
+									[
+										0 1 0 .57
+										0 1 0 5.14
+										0 1 0 5.14
+										0 1 0 1.71
+										0 1 0 1.71
+										0 1 0 2.856
+										0 1 0 2.856
+										0 1 0 3.43
+										0 1 0 3.43
+										0 1 0 0
+										0 1 0 0
+										0 1 0 .57
+									]
+								}
+								
+								DEF Scale PositionInterpolator
+								{
+									key
+									[
+										0
+										0
+										.2
+										.2
+										.4
+										.4
+										.6
+										.6
+										.8
+										.8
+										1
+										1
+									]
+									
+									keyValue
+									[
+										2 2 2
+										1.4 1.4 1.4
+										1.4 1.4 1.4
+										1.6 1.6 1.6
+										1.6 1.6 1.6
+										1.2 1.2 1.2
+										1.2 1.2 1.2
+										1.8 1.8 1.8
+										1.8 1.8 1.8
+										2 2 2
+									]
+								}
+								
+							]
+						}
 					]
-					
-					keyValue
-					[
-						0 1 0 .57
-						0 1 0 5.14
-						0 1 0 5.14
-						0 1 0 1.71
-						0 1 0 1.71
-						0 1 0 2.856
-						0 1 0 2.856
-						0 1 0 3.43
-						0 1 0 3.43
-						0 1 0 0
-						0 1 0 0
-						0 1 0 .57
-					]
-				}
-				
-				DEF Scale PositionInterpolator
-				{
-					key
-					[
-						0
-						0
-						.2
-						.2
-						.4
-						.4
-						.6
-						.6
-						.8
-						.8
-						1
-						1
-					]
-					
-					keyValue
-					[
-						2 2 2
-						1.4 1.4 1.4
-						1.4 1.4 1.4
-						1.6 1.6 1.6
-						1.6 1.6 1.6
-						1.2 1.2 1.2
-						1.2 1.2 1.2
-						1.8 1.8 1.8
-						1.8 1.8 1.8
-						2 2 2
-					]
-				}
-				
+				} #/Torche
+
 			]
 		}
+		
+		Group
+		{
+		}
+	
 	]
-} #/Torche
+}
+
 
 ROUTE Clock.fraction_changed TO Orientation.set_fraction
 ROUTE Orientation.value_changed TO BouleRotation.set_rotation
