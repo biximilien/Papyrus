@@ -86,8 +86,56 @@ DEF PALM_GROUP_5 Transform {
 }
 
 DEF PALM_GROUP_6 Transform {
-  translation 5 0 5
+  translation 15 0 15
   children [
     USE PALM_GROUP_1
+  ]
+}
+
+DEF PALM_GROUP_7 Transform {
+  translation 10 -1 10
+  children [
+    USE PALM_GROUP_5
+    USE PALM_GROUP_6
+  ]
+}
+
+DEF MEGA_PALM_GROUP_1 Transform {
+  translation -20 0 20
+  children [
+    USE PALM
+    USE PALM_1
+    USE PALM_2
+    USE PALM_3
+    USE PALM_4
+    USE PALM_5
+    USE PALM_6
+    USE PALM_GROUP_1
+    USE PALM_GROUP_2
+    USE PALM_GROUP_3
+    USE PALM_GROUP_4
+    USE PALM_GROUP_5
+    USE PALM_GROUP_6
+    USE PALM_GROUP_7
+  ]
+}
+
+DEF MEGA_PALM_GROUP_2 Transform {
+  translation 20 0 -20
+  children [
+    USE PALM
+    USE PALM_1
+    USE PALM_2
+    USE PALM_3
+    USE PALM_4
+    USE PALM_5
+    USE PALM_6
+    USE PALM_GROUP_1
+    USE PALM_GROUP_2
+    USE PALM_GROUP_3
+    USE PALM_GROUP_4
+    USE PALM_GROUP_5
+    USE PALM_GROUP_6
+    USE PALM_GROUP_7
   ]
 }
