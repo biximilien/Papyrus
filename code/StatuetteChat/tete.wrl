@@ -9,7 +9,8 @@ DEF CAT_HEAD Group {
         Shape {
           appearance DEF CAT_APPEARANCE Appearance {
             material Material {
-              diffuseColor 0.33 0.28 0.33
+              #diffuseColor 0.33 0.28 0.33
+			  diffuseColor .1 .1 .1
             }
           } # END CAT_APPEARANCE
 
@@ -46,7 +47,8 @@ DEF CAT_HEAD Group {
             DEF HEAD_EYE Shape {
               appearance DEF EYE_APPEARANCE Appearance {
                 material Material {
-                  diffuseColor 0.2 0.2 0.2
+                  #diffuseColor 0.2 0.2 0.2
+				  diffuseColor .1 .1 .1
                 }
               }
 

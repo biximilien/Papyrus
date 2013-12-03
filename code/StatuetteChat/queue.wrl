@@ -9,7 +9,8 @@ DEF CAT_TAIL Transform {
     Shape {
       appearance Appearance {
         material Material {
-          diffuseColor 0.2 0.3 0.2
+          #diffuseColor 0.2 0.3 0.2
+		  diffuseColor .1 .1 .1
         }
       }
       geometry Extrusion {
