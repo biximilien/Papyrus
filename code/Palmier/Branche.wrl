@@ -6,17 +6,14 @@ Transform
 	[
 		DEF Chunk8 Transform
 		{
-			#scale .75 1 1
 			children
 			[
 				DEF Chunk4 Transform
 				{
-					#scale .75 1 1
 					children
 					[
 						DEF Chunk2 Transform
 						{
-							#scale .75 1 1
 							children
 							[
 								DEF Chunk1 Transform
