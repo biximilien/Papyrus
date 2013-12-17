@@ -4,6 +4,9 @@ Shape
 {
 	appearance Appearance
 	{
+		material Material {
+			
+		}
 		texture ImageTexture
 		{
 			url "../Images/TextureMurs.jpg"
